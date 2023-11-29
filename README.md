@@ -7,23 +7,8 @@
 
 說明
 ---
-本資料加包含七個模組
-- PyPtt_generate_stock_posts_dataset.py
-  - 透過PyPtt，取得ptt Stock版的盤中閒聊post內容，產生資料集
-- generate_stock_sentiment_dataset.py
-  - 讀取post內容資料集，透過OpenAI API使用GPT模型分析post中的pushes(推文)的情緒與標的，並生成包含分析結果的資料集
-- generate_content_stock_sentiment_dataset.py
-  - 讀取post內容資料集，透過OpenAI API使用GPT模型分析post中的posts(發文)的情緒與標的，並生成包含分析結果的資料集
-- get_the_direction.py
-  - 讀取經人工審核過的盤中推文，將推文和鎖定的66張特定股票之漲跌以及大盤漲跌進行比較，找出有用的資料進行模型訓練
-- read_dataset.py
-  - csv資料集儲存時在Pushes欄位有經過格式的轉換，透過read_dataset.py中的read_dataset function可以讀取資料集，並將格式轉換回來
-- get_market_data.py
-  - 在找出有用資料時，可以透過push的時間自動抓取相同日期的大盤資料，並計算出30分鐘後的漲跌，協助找出有用資料 
-- get_individual_stocks.py
-  - 抓取各股票的金額，並計算出5min、15min、30min後的漲跌，協助找出有用的資料
-- Nickname.csv
-  - 將選擇的66張股票，整理出個別的暱稱，可用來將資料集中的標的，連接到其對應的股票漲跌
+操作手冊.pdf
+
     
 安裝
 ---
