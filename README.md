@@ -11,5 +11,5 @@
 
 [測試報告書.pdf](https://github.com/luyuxuan0414/movie.github.io/blob/main/%E6%B8%AC%E8%A9%A6%E5%A0%B1%E5%91%8A%E6%9B%B8%20.pdf)：顯示我們的系統回測效果。
 
-需求規格書.pdf
-設計規格書.pdf：此設計規格書之撰寫建立於需求規格書上，根據目標系統的各種需求，將系統化繁為簡，設計出過程中需要使用到的元件、模組和物件，使得日後當軟體工程師撰 寫軟體時能夠更有依循，將效率發揮到最大值，以此減少軟體開發的成本，並維持整個系統的穩定性。
+[需求規格書.pdf](https://github.com/luyuxuan0414/movie.github.io/blob/main/%E9%9C%80%E6%B1%82%E8%A6%8F%E6%A0%BC%E6%9B%B8.pdf)
+[設計規格書.pdf](https://github.com/luyuxuan0414/movie.github.io/blob/main/%E8%A8%AD%E8%A8%88%E8%A6%8F%E6%A0%BC%E6%9B%B8.pdf)：此設計規格書之撰寫建立於需求規格書上，根據目標系統的各種需求，將系統化繁為簡，設計出過程中需要使用到的元件、模組和物件，使得日後當軟體工程師撰 寫軟體時能夠更有依循，將效率發揮到最大值，以此減少軟體開發的成本，並維持整個系統的穩定性。
