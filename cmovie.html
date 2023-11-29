@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<!-- celebritysingle12:04-->
+<head>
+	<!-- Basic need -->
+	<title>電影介紹</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="/static/plugins.css">
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/ourcss.css">
+
+</head>
+<body>
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="/static/logo.png" alt="" width="150" height="150">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--end of preloading-->
+<!--login form popup-->
+<div class="login-wrapper" id="login-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>Login</h3>
+        <form method="POST" action="#">
+        	<div class="row">
+        		 <label for="memberid">
+                    Member ID:
+                    <input type="text" name="memberid" id="memberid" placeholder="Bxxxxxxx" required="required" />
+                </label>
+        	</div>
+           
+            <div class="row">
+            	<label for="password">
+                    Password:
+                    <input type="password" name="password" id="password" placeholder="******" required="required" />
+                </label>
+            </div>
+            <div class="row">
+            	<div class="remember">
+					<div>
+						<input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
+					</div>
+            		<a href="forgetpwd.html" class = 'forgetpwd' id = 'forget'  onclick = 'forget();'>Forget password ?</a>
+            	</div>
+            </div>
+           <div class="row">
+           	 <button type="submit" name="submit">Login</button>
+           </div>
+        </form>
+    </div>
+</div>
+<div class='i'>
+	<p>{{i}}</p>
+</div>
+<!--end of login form popup-->
+<!--signup form popup-->
+<div class="login-wrapper"  id="signup-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>sign up</h3>
+        <form method="POST" action="#">
+            <div class="row">
+                 <label for="memberid-2">
+                    Member ID:
+                    <input type="text" name="memberid2" id="memberid-2" placeholder="Bxxxxxxx" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="password-2">
+                    Password:
+                    <input type="password" name="password2" id="password-2" placeholder="" required="required">
+                </label>
+            </div>
+             <div class="row">
+                <label for="repassword-2">
+                    re-type Password:
+                    <input type="password" name="password3" id="repassword-2" placeholder="" required="required">
+                </label>
+            </div>
+			<div class="row">
+                <label for="name-2">
+                    Name:
+                    <input type="text" name="name2" id="name-2" placeholder="" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="birthday-2">
+                   Birthday:
+                    <input type="date" name="birthday2" id="birthday-2" placeholder="" pattern="" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="phone-2">
+                   Phone:
+                    <input type="text" name="phone2" id="phone-2" placeholder="" required="required">
+                </label>
+            </div>
+            <div class="row">
+                <label for="email-2">
+                   Email:
+                    <input type="text" name="email2" id="email-2" placeholder="" required="required">
+                </label>
+			</div>
+           <div class="row">
+             <button type="submit" name="submit2">sign up</button>
+           </div>
+        </form>
+    </div>
+</div>
+<!--end of signup form popup-->
+
+<!-- BEGIN | Header -->
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="/"><img class="logo" src="/static/logo.png" alt="" width="80" height="80"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
+							首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/">Home</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							電影介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/movie3%3Fmovie%3Dmovie1">Avengers: Endgame</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie2">BLACK PANTHER WAKANDA FOREVER</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie3">TOP GUN: MAVERICK</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie4">Captain America: The Winter Soldier</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie5">Eternals</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie6">Doctor Strange in the Multiverse of Madness</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie7">Mission: Impossible – Fallout</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie8">Kingsman: The Secret Service</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie9">那些年，我們一起追的女孩</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie10">COCO</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							影城介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="theater.html">Theater</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							會員專區<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="member.html">Member Info</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav flex-child-menu menu-right">
+						<li class="dropdown first">
+						<li class="loginLink"><a href="#">LOG In</a></li>
+						<li class="btn signupLink"><a href="#">sign up</a></li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+	    
+	    <!-- top search form -->
+	    <div class="top-search">
+	    	<select>
+				<option value="united">TV show</option>
+				<option value="saab">Others</option>
+			</select>
+			<input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+	    </div>
+	</div>
+</header>
+<!-- END | Header -->
+
+<div class="hero hero3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- celebrity single section-->
+
+<div class="page-single movie-single cebleb-single">
+	<div class="container">
+		<div class="row ipad-width">
+	
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				
+					{% if result == 'movie11'%}
+				    <div class="mv-ceb">
+					    <img src="static/cmovie1.jpg" alt="">
+				    </div>
+				    {%endif%}
+                    {% if result == 'movie12'%}
+				    <div class="mv-ceb">
+					    <img src="static/cmovie2.jpg" alt="">
+				    </div>
+				    {%endif%}
+                    {% if result == 'movie13'%}
+				    <div class="mv-ceb">
+					    <img src="static/cmovie3.jpg" alt="">
+				    </div>
+				    {%endif%}
+                    {% if result == 'movie14'%}
+				    <div class="mv-ceb">
+					    <img src="static/cmovie4.jpg" alt="">
+				    </div>
+				    {%endif%}
+                    {% if result == 'movie15'%}
+				    <div class="mv-ceb">
+					    <img src="static/cmovie5.jpg" alt="">
+				    </div>
+				    {%endif%}
+                    {% if result == 'movie16'%}
+				    <div class="mv-ceb">
+					    <img src="static/cmovie6.jpg" alt="">
+				    </div>
+				    {%endif%}
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="movie-single-ct">
+					{% if result == 'movie11'%}
+						<h1 class="bd-hd">灌籃高手</h1>
+						<p class="ceb-single">THE FIRST SLAM DUNK</p>
+                        <p class="ceb-single">上映日期：2023/01/23</p>
+					{% endif %}
+                    {% if result == 'movie12'%}
+						<h1 class="bd-hd">玩命特攻：武演行動</h1>
+						<p class="ceb-single">OPERATION FORTUNE : RUSE DE GUERRE</p>
+                        <p class="ceb-single">上映日期：2023/01/19</p>
+					{% endif %}
+                    {% if result == 'movie13'%}
+						<h1 class="bd-hd">地下疑雲</h1>
+						<p class="ceb-single">ON THE EDGE</p>
+                        <p class="ceb-single">上映日期：2023/01/06</p>
+					{% endif %}
+                    {% if result == 'movie14'%}
+						<h1 class="bd-hd">西蒙娜：世紀之聲</h1>
+						<p class="ceb-single"><stromg>SIMONE</strong></p>
+                        <p class="ceb-single">上映日期：2023/01/06</p>
+					{% endif %}
+                    {% if result == 'movie15'%}
+						<h1 class="bd-hd">想見你</h1>
+						<p class="ceb-single"><stromg>SOMEDAY OR ONE DAY</strong></p>
+                        <p class="ceb-single">上映日期：2022/12/30</p>
+					{% endif %}
+                    {% if result == 'movie16'%}
+						<h1 class="bd-hd">紳探追緝令</h1>
+                      
+						<p class="ceb-single"><stromg>GENTLEMAN</strong></p>
+                     
+                        <p class="ceb-single">上映日期：2023/01/06</p>
+					{% endif %}
+
+						<div class="social-link cebsingle-socail">
+							<a href="#"><i class="ion-social-facebook"></i></a>
+							<a href="#"><i class="ion-social-twitter"></i></a>
+							<a href="#"><i class="ion-social-googleplus"></i></a>
+							<a href="#"><i class="ion-social-linkedin"></i></a>
+						</div>
+					<div class="movie-tabs">
+						<div class="tabs">
+							<ul class="tab-links tabs-mv">
+								<li class="active"><a href="#overviewceb">簡介</a></li>
+								
+							</ul>
+						
+						    <div class="tab-content">
+						        <div id="overviewceb" class="tab active">
+									<div class="row">
+										{% if result == 'movie11'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>「教練，我想打籃球！」火紅32年的經典漫畫《灌籃高手》從1990年連載到1996年，人物角色為了籃球比賽揮灑熱血汗水激勵不少人骨子裡的「籃球魂」，光在日本的發行量就超過1億2千萬冊，在台灣也擄獲不少粉絲，櫻木花道、流川楓、宮城良田、三井壽、赤木剛憲、赤木晴子等角色都各自有擁護者；儘管連載結束26年，書迷一直引頸期盼作品能回歸，2019年當原作井上雄彥在社群公佈櫻木花道的繪圖時，關注度瞬間破表，大家紛紛留言回憶起當年追漫畫跟動畫的感動，
+												就知道書迷有多期待。</strong></p>
+											<iframe width="700" height="400" position:'relative' left:'30px' src="https://www.youtube.com/embed/i2ItVesSxwU"></iframe>
+										</div>
+										{% endif %}
+                                        {% if result == 'movie12'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>超級間諜奧森福瓊 (傑森史塔森 飾) 和他的頂尖特務團隊招募了好萊塢巨星丹尼法蘭西斯柯 (喬許哈奈特 飾) 為他們執行臥底任務，以阻止億萬富翁軍火商蒙瑞格西蒙茲 (休葛蘭 飾)出售一種足以破壞世界秩序的致命新型武器。</strong></p>
+                                                
+											<iframe width="700" height="400" position:'relative' left:'30px' src="https://www.youtube.com/embed/KILpP45Vkz8"></iframe>
+										</div>
+										{% endif %}
+                                        {% if result == 'movie13'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>一如往常規律工作的日子，雷歐將地鐵列車緩緩駛進站，月台上一名年輕人一躍而下落進前方的軌道，雷歐當場認出那是他多年未見的兒子雨果。
+                                                偵查隊組長薇吉妮受命調查，釐清雨果自殺的動機是否另有隱情。一場血腥的搶劫，藏匿的贓物與屍體，這些線索開始與雷奧有所連結。
+                                                雷歐希望靠自己查出造成兒子身亡的原因；薇吉妮則想挖掘這看似一般、身手卻不凡的列車駕駛究竟有何不尋常的過去。
+                                                兩人都經歷過失去親人或愛人的傷痛，一個身為父親，一個身為女兒，他們的人生在此交集，給予彼此新的方向。</strong></p>
+											<iframe width="700" height="400" position:'relative' left:'30px' src="https://www.youtube.com/embed/ZYsG3WbTAp0"></iframe>
+										</div>
+										{% endif %}
+                                        {% if result == 'movie14'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>20世紀法國最傑出的女性之一：西蒙娜韋依 (Simone Veil) 的傳記電影。從韋依的童年時期到她的政治奮鬥，經歷數起20世紀的重大事件。
+                                                私密而史詩般地呈現一位非凡的女性，如何挑戰並改變她的時代。西蒙娜韋依所捍衛的人文理念，時至今日仍無比重要。</strong></p>
+											<iframe width="700" height="400" position:'relative' left:'30px' src="https://www.youtube.com/embed/RXdk1bOEfE8"></iframe>
+										</div>
+										{% endif %}
+                                        {% if result == 'movie15'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>命中註定的相遇，似曾相似的夢境，想再次見到你，千方百計。
+                                            黃雨萱不再是多年前那個迷路無助的小女孩，現已出落得風儀玉立，當時還是高中生的李子維
+                                            如今也出了社會，個性依舊磊落颯爽。一場相似的夢境牽絆著兩人的靈魂，因為錄音帶中那首同樣的歌而反覆的相遇、相識、相知再相戀。
+                                            命運反覆的將李子維、黃雨萱、陳韻如、莫俊傑以及王詮勝緊扣在一起。重逢，是另一場循環的開始，眾人又該如何破解這次的時空循環？拯救彼此的生命？</strong></p>
+                                                
+
+											<iframe width="700" height="400" position:'relative' left:'30px' src="https://www.youtube.com/embed/d3HMIAIrnmc"></iframe>
+										</div>
+										{% endif %}
+                                        {% if result == 'movie16'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>徵信社老闆池賢洙 (朱智勛 飾) ，為了與委託人一同尋找小狗，在前往的某間別墅裡遭怪人襲擊暈倒。斷片的記憶、消失的委託人……當他打起精神後，卻被誣陷為綁架案嫌犯。
+                                                賢洙在束手無策的被捕過程中發生翻車意外後，竟被誤會成是檢察官，他為了尋找失蹤的委託人，便偽裝成檢察官展開調查。檢察官中的檢察官，人稱「監察部瘋子」的金華珍 (崔聖恩 飾) 嚐到了降職之苦。
+                                                某天，在她調查一起綁架案的過程中，遇上了冒充檢察官的賢洙。原以為只是一起單純的綁架案，卻發現案件與讓自己吃足苦頭的律師事務所財閥全道勳 (朴星雄 飾) 有關。
+                                                想洗刷冤屈的池賢洙與想逮捕全道勳的金華珍，為了達成各自目的而聯手的兩人，在揭發大型律師事務所財閥醜惡的犯罪過程中，遇上了始料未及的狀況…… </strong></p>
+                                                
+                                               
+											<iframe width="700" height="400" position:'relative' left:'30px' src="https://www.youtube.com/embed/t7Gsf1thnDE"></iframe>
+										</div>
+										{% endif %}
+						            		<div class="ads">
+												<img src="/static/ads1.png" alt="">
+											</div>
+						            	</div>
+						            </div>
+						        </div>
+								<form method="GET" action="/seat">
+								<div id="theater" class="tab">
+									<div class = 'theaterbtn' id='theaterbtn'>
+										<div>
+										<div class="blog-it-infor">
+											<h3><a href="#">Theater</a></h3>
+										</div>
+										<select name = 'theater'>
+											<option>台北信義威秀影城</option>
+											<option>台北京站威秀影城</option>
+											<option>板橋大遠百威秀影城</option>
+											<option>中和環球威秀影城</option>
+											<option>林口MITSUI OUTLET PARK威秀影城</option>
+											<option>桃園統領威秀影城</option>
+											<option>新竹大遠百威秀影城</option>
+											<option>新竹巨城威秀影城</option>
+											<option>頭份尚順威秀影城</option>
+											<option>台中大遠百威秀影城</option>
+											<option>台中TIGER CITY威秀影城</option>
+											<option>台中大魯閣新時代威秀影城</option>
+											<option>台南大遠百威秀影城</option>
+											<option>台南FOCUS 威秀影城</option>
+											<option>南南紡威秀影城</option>
+											<option>高雄大遠百威秀影城</option>
+											<option>花蓮新天堂樂園威秀影城</option>
+										</select>
+										<!--<a name = 'theater' class='fgpwdbtn' value='theater2' onclick = 'theater();'>台北京站威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater3' onclick = 'theater();'>板橋大遠百威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater4' onclick = 'theater();'>中和環球威秀影城</a>
+										<br><br>
+										<a name = 'theater' class='fgpwdbtn' value='theater5' onclick = 'theater();'>林口MITSUI OUTLET PARK威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater6' onclick = 'theater();'>桃園統領威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater7' onclick = 'theater();'>新竹大遠百威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater8' onclick = 'theater();'>新竹巨城威秀影城</a>
+										<br><br>
+										<a name = 'theater' class='fgpwdbtn' value='theater9' onclick = 'theater();'>頭份尚順威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater10' onclick = 'theater();'>台中大遠百威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater11' onclick = 'theater();'>台中TIGER CITY威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater12' onclick = 'theater();'>台中大魯閣新時代威秀影城</a>
+										<br><br>
+										<a name = 'theater' class='fgpwdbtn' value='theater13' onclick = 'theater();'>台南大遠百威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater14' onclick = 'theater();'>台南FOCUS 威秀影城</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater15' onclick = 'theater();'>台南南紡威秀影城A1館</a>
+										<a name = 'theater' class='fgpwdbtn' value='theater16' onclick = 'theater();'>高雄大遠百威秀影城</a>
+										<br><br>
+										<a name = 'theater' class='fgpwdbtn' value='theater17' onclick = 'theater();'>花蓮新天堂樂園威秀影城</a>-->
+									</div>
+									<br>
+									<div class = 'datebtn' id = 'datebtn'>
+										<div class="blog-it-infor">
+											<h3><a href="#">Date</a></h3>
+										</div>
+										<select name = 'date' id='date'>
+											<option value = 'date1'>1/13</option>
+											<option value = 'date2'>1/14</option>
+											<option value = 'date3'>1/15</option>
+											<option value = 'date4'>1/16</option>
+											<option value = 'date5'>1/17</option>
+										</select>
+										<!--<a name = 'date' class='fgpwdbtn' value='date1' onclick = 'date();'>1/13</a>
+										<a name = 'date' class='fgpwdbtn' value='date2' onclick = 'date();'>1/14</a>
+										<a name = 'date' class='fgpwdbtn' value='date3' onclick = 'date();'>1/15</a>
+										<a name = 'date' class='fgpwdbtn' value='date4' onclick = 'date();'>1/16</a>
+										<a name = 'date' class='fgpwdbtn' value='date5' onclick = 'date();'>1/17</a>
+									style="display: none;"-->
+									</div>
+									<br>
+									<div class = 'timebtn' id = 'timebtn'>
+										<div class="blog-it-infor">
+											<h3><a href="#">Time</a></h3>
+										</div>
+										<select name = 'time' id='time'>
+											<option value = 'time1'>9:30</option>
+											<option value = 'time2'>12:30</option>
+											<option value = 'time3'>18:30</option>
+										</select>
+										<br>
+										<!--<a name = 'time' class='fgpwdbtn' value='time1' onclick = 'time();'>9:30</a>
+										<a name = 'time' class='fgpwdbtn' value='time2' onclick = 'time();'>12:30</a>
+										<a name = 'time' class='fgpwdbtn' value='time3' onclick = 'time();'>18:30</a>
+									</div>-->
+									<div id = 'ticketbtn'>
+										<div class="blog-it-infor">
+											<h3><a href="#">Ticket Type</a></h3>
+										</div>
+										<div class="blog-it-infor">
+											<h3><a href="#">一般票$300</a></h3>
+										</div>
+										<select name = 'ticket1'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">學生票$200</a></h3>
+										</div>
+										<select name = 'ticket2'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">敬老票$150</a></h3>
+										</div>
+										<select name = 'ticket3'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<br>
+											<h3><a href="#">Food</a></h3>
+										</div>
+										<div class="blog-it-infor">
+											<h3><a href="#">可樂（大）$60</a></h3>
+										</div>
+										<select name = 'food1'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">可樂（中）$50</a></h3>
+										</div>
+										<select name = 'food2'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">可樂（小）$45</a></h3>
+										</div>
+										<select name = 'food3'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">爆米花（大）$120</a></h3>
+										</div>
+										<select name = 'food4'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">爆米花（中）$110</a></h3>
+										</div>
+										<select name = 'food5'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">爆米花（小）$100</a></h3>
+										</div>
+										<select name = 'food6'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">熱狗 $90</a></h3>
+										</div>
+										<select name = 'food7'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">吉拿棒 $90</a></h3>
+										</div>
+										<select name = 'food8'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<button type="submit" class="fgpwdbtn" id="next" value="next">Next</button>
+										<br><br><br>
+									</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function theater(){
+		var obj = document.getElementById('datebtn');
+    	if (obj.style.display =='none')
+        	obj.style.display = 'block';
+    	else{
+        	obj.style.display = 'none';
+    	}
+	}
+	function date(){
+		var obj = document.getElementById('timebtn');
+    	if (obj.style.display =='none')
+    	{
+        	obj.style.display = 'block';
+    	}
+    	else{
+        	obj.style.display = 'none';
+    	}
+	}
+	function time(){
+		var obj = document.getElementById('ticketbtn');
+    	if (obj.style.display =='none')
+    	{
+        	obj.style.display = 'block';
+    	}
+    	else{
+        	obj.style.display = 'none';
+    	}
+	}
+</script>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/plugins2.js"></script>
+<script src="/static/js/custom.js"></script>
+</body>
+
+<!-- celebritysingle12:18-->
+</html>

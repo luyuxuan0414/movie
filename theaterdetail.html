@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<!-- celebritysingle12:04-->
+<head>
+	<!-- Basic need -->
+	<title>電影介紹</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="/static/plugins.css">
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/ourcss.css">
+
+</head>
+<body>
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="/static/logo.png" alt="" width="150" height="150">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--end of preloading-->
+<!-- BEGIN | Header -->
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="/"><img class="logo" src="/static/logo.png" alt="" width="80" height="80"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
+							首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/">Home</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							電影介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/movie3%3Fmovie%3Dmovie1">Avengers: Endgame</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie2">BLACK PANTHER WAKANDA FOREVER</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie3">TOP GUN: MAVERICK</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie4">Captain America: The Winter Soldier</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie5">Eternals</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie6">Doctor Strange in the Multiverse of Madness</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie7">Mission: Impossible – Fallout</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie8">Kingsman: The Secret Service</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie9">那些年，我們一起追的女孩</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie10">COCO</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							影城介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="theater.html">Theater</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							會員專區<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="member.html">Member Info</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+	    
+	    <!-- top search form -->
+	    <div class="top-search">
+	    	<select>
+				<option value="united">TV show</option>
+				<option value="saab">Others</option>
+			</select>
+			<input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+	    </div>
+	</div>
+</header>
+<!-- END | Header -->
+
+<div class="hero hero3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- celebrity single section-->
+
+<div class="page-single movie-single cebleb-single">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				{% if result == 'theater1'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-1.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater2'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-2.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater3'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-3.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater4'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-4.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater5'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-5.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater6'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-6.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater7'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-7.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater8'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-8.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater9'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-9.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater10'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-10.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater11'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-11.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater12'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-12.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater13'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-13.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater14'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-14.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater15'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-15.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater16'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-16.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'theater17'%}
+				<div class="mv-ceb">
+					<img src="/static/theater1-17.jpg" alt="">
+				</div>
+				{%endif%}
+			</div>
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="movie-single-ct">
+					{% if result == 'theater1'%}
+						<h1 class="bd-hd">台北信義威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Taipei Hsin Yi</p>
+					{% endif %}
+					{% if result == 'theater2'%}
+						<h1 class="bd-hd">台北京站威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Taipei Qsquare</p>
+					{% endif %}
+					{% if result == 'theater3'%}
+						<h1 class="bd-hd">板橋大遠百威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Banciao Mega City</p>
+					{% endif %}
+					{% if result == 'theater4'%}
+						<h1 class="bd-hd">中和環球威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Global Mall</p>
+					{% endif %}
+					{% if result == 'theater5'%}
+						<h1 class="bd-hd">林口MITSUI OUTLET PARK威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Linkou Mitsui Outlet Park</p>
+					{% endif %}
+					{% if result == 'theater6'%}
+						<h1 class="bd-hd">桃園統領威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Taoyuan Tonlin</p>
+					{% endif %}
+					{% if result == 'theater7'%}
+						<h1 class="bd-hd">新竹大遠百威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Hsinchu FE21</p>
+					{% endif %}
+					{% if result == 'theater8'%}
+						<h1 class="bd-hd">新竹巨城威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Hsinchu Big City</p>
+					{% endif %}
+					{% if result == 'theater9'%}
+						<h1 class="bd-hd">頭份尚順威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Toufen Shang Shun Mall</p>
+					{% endif %}
+					{% if result == 'theater10'%}
+						<h1 class="bd-hd">台中大遠百威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Taichung Top City</p>
+					{% endif %}
+					{% if result == 'theater11'%}
+						<h1 class="bd-hd">台中TIGER CITY威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Taichung Tiger City</p>
+					{% endif %}
+					{% if result == 'theater12'%}
+						<h1 class="bd-hd">台中大魯閣新時代威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Taichung Taroko Mall</p>
+					{% endif %}
+					{% if result == 'theater13'%}
+						<h1 class="bd-hd">台南大遠百威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Tainan FE21</p>
+					{% endif %}
+					{% if result == 'theater14'%}
+						<h1 class="bd-hd">台南FOCUS 威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Tainan Focus Square</p>
+					{% endif %}
+					{% if result == 'theater15'%}
+						<h1 class="bd-hd">台南南紡威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Tainan T.S. Mall</p>
+					{% endif %}
+					{% if result == 'theater16'%}
+						<h1 class="bd-hd">高雄大遠百威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Kaohsiung FE21</p>
+					{% endif %}
+					{% if result == 'theater17'%}
+						<h1 class="bd-hd">花蓮新天堂樂園威秀影城</h1>
+						<p class="ceb-single">Vie Show Cinemas Hualien Paradiso</p>
+					{% endif %}
+						<div class="social-link cebsingle-socail">
+							<a href="#"><i class="ion-social-facebook"></i></a>
+							<a href="#"><i class="ion-social-twitter"></i></a>
+							<a href="#"><i class="ion-social-googleplus"></i></a>
+							<a href="#"><i class="ion-social-linkedin"></i></a>
+						</div>
+					<div class="movie-tabs">
+						<div class="tabs">
+							<ul class="tab-links tabs-mv">
+								<li class="active"><a href="#overviewceb">簡介</a></li>
+							</ul>
+						    <div class="tab-content">
+						        <div id="overviewceb" class="tab active">
+									<div class="row">
+										{% if result == 'theater1'%}
+						            	<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>台北信義威秀影城內有時髦前衛、聲光炫麗的裝潢，為全國第一座專門為放映電影而量身打造的建築設計，提供了由現成建築物改裝的傳統電影院無法
+												擁有的舒適視聽空間。世界上最棒的影廳之一的4DX影廳，威秀影城2013年獨家引進，打造『台北信義威秀影城』全台首座4DX影廳，帶給您世界級的
+												最新影音感官全體驗效果。為滿足觀眾視聽至高無上的享受，台北信義威秀影城應用最新科技，為未來影城之設計規劃建立新規範，也為台灣的電影院史
+												上樹立新的里程碑。出自名室內設計師之手的17間影廳院，皆具備超大型廣角弧形銀幕及球場座位排列的座椅，提供威秀影城之觀眾寬敞舒適、
+												無障礙的空間，為全台首座經過THX世界標準聲場環境認證的標準影廳，提供北台灣民眾世界級的影音享受。※本影城為方便消費者，亦設有無障礙空間。
+												●輪椅席(共40個席次)：第1、3-11、14廳-各3席，第2、15-18廳-各2席●無障礙電梯：一樓服務台旁●無障礙坡道：二樓第12廳前
+												●無障礙停車位：地下停車場二樓●無障礙廁所。本據點共17座影廳2,693席座位、40席無障礙座位，內含：1座4DX影廳 140個座位</strong></p>
+										</div>
+										{% endif %} 
+										{% if result == 'theater2'%}
+						            	<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>台北京站威秀影城為威秀影城全省第八家影城，也是正式更名為威秀影城後，第一家全新開幕的影城。座落於西區最大公共交通轉運樞紐的複合式
+												商場內。經過京站時尚廣場進入台北京站威秀影城的長型手扶梯後，就是由國內知名設計團隊打造，時尚大器的入口挑高大廳；漫步入內，設計感鏤空天花版
+												，二側步道不但有電影相關資訊，還有錯落的小店可在買票後稍做瀏覽。※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共9個席次)：第1-10廳-
+												各有1席●無障礙電梯：一樓市民大道入口處●入口指引服務：四樓手扶梯旁●無障礙廁所：五樓售票處後方2間、六樓販賣處後方2間。本據點共9座影廳
+												1,768席座位、9席無障礙座位。</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater3'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>板橋大遠百威秀影城是威秀影城於新北市的第一個據點。座落於新板特區板橋大遠百複合式商場內的10樓，為全數位化影城，全面採用最先進的
+												Christie數位二代機放映系統，並且皆有數位IMAX影廳配置，影城音響系統採用全球最先進QSC四迴路音響系統，是台灣影院中極其頂尖的音響設備。
+												※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共30個席次)第1廳、3-5廳和8-9廳各3席，第6廳5席，第2廳和第7廳各4席，第10廳2席
+												●無障礙電梯：大遠百7號電梯，搭至十二樓●無障礙廁所：第3廳旁●無障礙停車場：地下停車場 地下二樓和地下三樓。本據點共9座影廳2,057席座位，
+												30席無障礙座位，內含：1座 IMAX影廳 404個座位（5個無障礙座位）</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater4'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>威秀影城於環球購物中心新北中和店，推出10座嶄新雷射影廳，座位數1,360席，帶給中永和及鄰近地區影迷更明亮的高畫質觀影體驗。前後座位
+												空間全部升級，滿足影迷觀賞電影的舒適需求；10座雷射影廳提供多元影片內容，增加場次彈性，讓觀眾能有更多選擇，打造服務影迷最全面的新穎影城。
+												※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共25個席次)：第1廳、8-11廳各2席，第2-3廳、5-7廳-各3席●無障礙電梯：中和環球3、6號電梯
+												，搭至四樓●無障礙廁所：第2廳出口●障礙停車場：地下停車場及五樓停車場。本據點共10座影廳1,360席座位，25席無障礙座位。</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater5'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>林口MITSUI OUTLET PARK威秀影城，為威秀影城以開創性概念打造的全新據點。為了給影迷最佳觀影體驗，本據點將採取全4K影廳規格，
+												讓影像投影畫質大幅提升，並透過優化程度使影像達到最清晰、栩栩如生效果。威秀影城也特別打造全新人文概念影廳「Mappa」，讓影迷在娛樂觀影之外，
+												亦能感受濃厚的藝文色彩風格，將成為北台灣最具風格化的影城。而新北市首座4DX動感體驗影廳，也讓引頸期盼的新北市影迷們，能就近體驗全球好萊塢
+												最夯的互動娛樂座椅效果。※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共24個席次)：第1.6廳-各2席，第2-5廳-各3席，第7-9廳-各3席，
+												Mappa影廳-各2席●無障礙廁所：三樓共6間●無障礙升降設備 ：北口一樓至三樓。本據點共9座影廳1,856席座位、24席無障礙座位，內含：
+												1座 ４DX影廳 144個座位（2個無障礙座位）1座 Mappa影廳 125個座位（2個無障礙座位）</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater6'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>位於桃園火車站人潮聚集處的統領百貨，組成客層多元化。舉凡學生族群到新住民、新移工、粉領族及親子家庭，都是此據點主力消費者；
+												威秀影城首度落點桃園，就要打造給影迷們最多選擇的影城為風格。為了迎接包羅萬象的各國片單，威秀影城推出20個全雷射影廳，讓桃園觀眾能享受到各
+												式電影，給你最多影廳最多選擇；電影類型應有盡有，滿足影迷觀影期待。※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共25個席次)：
+												第1.6.10.11.18廳-各2席，第2.3.5.7.8.9.12.13.14.15.16.17.19.20.21廳-各1席。●無障礙廁所。本據點共20座影廳990席座位、
+												25席無障礙座位。</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater7'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>新竹大遠百威秀影城位於新竹市西大路大遠百娛樂城8樓及10樓，引進世界級的影音設備，同步上映全球熱門的精采好片，儼然為新竹娛樂新地標，
+												無疑地提供了新竹地區朋友更優質的娛樂生活。由於座落於西大路和西門街交叉處的市中心精華區，公車等大眾工具便捷，而大遠百娛樂城本身更提
+												供了504個停車位，287個機車停車格，可說是得天獨厚的商場地點。此外，它還緊鄰繁榮的城隍廟傳統市場，其乃是新竹市民眾長久以來休憩聚集之
+												地!如此精華之地段，肯定讓新竹市民眾對新竹威秀的所在更增添了一份熟悉好感！※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共31個席次)：
+												第6.7.10廳-各4席，第1.2.8.9廳-各3席，第3.5廳-各2席，GC1廳2席/GC2廳1席●無障礙廁所：八樓、十樓各1間。本據點共11座影廳1,848席座位、
+												28席無障礙座位，內含：1座4DX影廳 144個座位（2個無障礙座位）2座GOLD CLASS影廳 87個座位（３個無障礙座位）</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater8'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>新竹巨城威秀影城位於新竹最大的百貨購物中心，這個以「家」的視覺風格為主要設計，採用木質色系裝潢強調舒適、潔淨的感覺。而這個新家大
+												廳採簡約優雅的寬敞空間設計，並增加休憩的CAFÉ BAR，給桃竹苗地區的大居民們感受休閒樂活的新生活氣象！這裡絕對是所有影迷的第二個「家」，隨處
+												可見影城貼心設計，符合影迷們的消費模式。其中數位IMAX影廳可容納近300多人的座位，乃桃竹苗地區打造的首座擁有商用數位IMAX放映設備的影城，
+												巨大弧形銀幕造完美觀影包覆感，不論坐在影廳內任何角落的觀眾，都能完全融入電影情境中，感受身置電影場景的震撼體驗！※本影城為方便消費者，
+												亦設有無障礙空間。●輪椅席(共30個席次)：1-2廳-4席，第3廳-3席，第5-8廳-4席、第9廳-3席●無障礙電梯：如有需求請洽詢現場人員
+												●無障礙廁所：第2廳、第5廳旁。本據點共8座影廳2,217席座位、30席無障礙座位，內含：1座 IMAX影廳 260個座位（3個無障礙座位）</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater9'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>苗栗尚順威秀影城，讓座落在山中之城的這塊土地擁有電影養份；本影城呼應素有山城之稱的苗栗，打造出山城之鑽的設計概念。
+												影院溢綻著神秘的紫色系瑰麗質感，以歐洲古典風格為影院空間宇宙，讓人身置歐陸小城的巴洛克風格。※本影城為方便消費者，亦設有無障礙空間。
+												●輪椅席(共24個席次)：第2-9廳-各有3席●無障礙電梯●無障礙停車位：地下室停車場一樓●無障礙廁所：男化妝室入口旁。本據點共8座影廳1,650席座位
+												、24席無障礙座位。</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater10'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>台中大遠百威秀影城為2011年底於台中增設的第三個據點，這座中台灣最新的複合式影城以原野大地色彩設計，有別於過去威秀影城的美式風格，
+												將帶給中台灣民眾高水準的視聽饗宴。※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共15個席次)：第1-2廳-各有4席，第3-8廳-各有3席
+												●無障礙電梯：台灣大道北館右方，可直達●無障礙停車位：百貨停車場B2-B6皆設有●無障礙廁所：1廳、5廳旁各1間。本據點共7座影廳1,777席座位、
+												23席無障礙座位，內含：1座IMAX影廳 355個座位（4個無障礙座位）</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater11'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>TIGER CITY威秀影城於2011年11月25日全新改裝開幕，眾所矚目的大台中首座商用數位IMAX影廳亦宣告正式進駐大台中。全新改裝的影城呈現
+												出時尚奢華、簡約優雅的全新風貌，影廳內的座椅則加倍的舒適寬敞。2002年1月18日威秀影城為台灣觀眾引進享譽國際之「GOLD CLASS頂級影廳」
+												，座落於台中TIGER CITY威秀影城，為全台第一座與國際同步、獨一無二的超豪華影廳。※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共31個席次)
+												：第1、7、9廳-各3席，第2、3、5、6、8廳-各4席，GOLD CLASS影廳-各1席●無障礙電梯：一樓透明景觀電梯旁●無障礙坡道：一樓廣場地下室車道入口旁
+												●無障礙停車位：地下停車場二樓與地下三樓●無障礙廁所：四樓9廳女廁旁。本據點共10座影廳2,469席座位、31席無障礙座位，內含：
+												1座IMAX影廳307個座位（4個無障礙座位）2座GOLD CLASS影廳 72個座位（各1個無障礙座位）</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater12'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>威秀影城於大魯閣新時代購物中心台中店推出9座影廳，座位數逾1,781席，包括一個杜比ATMOS影廳；睽違六年重回大魯閣新時代購物中心，
+												期待服務更多影迷們；多廳風格提供多元影片內容，增加場次彈性，讓觀眾選擇更多。※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共26個席次)：
+												第1廳、7廳各4席，第2-6廳-各3席、8-10廳-各2席●無障礙電梯：台中大魯閣新時代復興路側及大智路側電梯，皆可搭至四樓影城●無障礙廁所：
+												四樓影城大廳●無障礙停車場：地下停車場。本據點共9座影廳1,781席座位，26席無障礙座位。</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater13'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>威秀影城於2002年7月5日正式在府城台南開幕，這座在台南核心地帶的威秀影城始終是年輕學生族群的最愛。經過了16年的歲月，
+												威秀翻新本次據點，裝設了高度舒適彈性沙發座椅，讓影迷一坐上去感受前所未有的柔軟包覆。本次改裝加寬座椅間距，本來近2100席的座位少了600多席
+												，把原本30%的空間多留給觀眾，給足影迷最寬闊的觀影體驗。※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共10個席次)：4DX影廳設有2席
+												(此廳設有自動升降平台)、第2-10 廳-各1席●無障礙電梯：百貨一樓景觀客梯與威秀影城五樓4DX影廳旁●無障礙停車位：地下停車場一樓●無障礙廁所：
+												五樓、七樓與九樓各設有1座。本據點共9座影廳1526 席座位、10席無障礙座位，內含：1座4DX影廳 140個座位（2個無障礙座位）</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater14'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>威秀影城於台南市的第三個據點：台南FOCUS威秀影城。 
+												本據點以簡約時尚打造出這座年輕化的影城，寬闊明亮，讓每個造訪的觀眾覺得猶如回到家般的溫暖。全影城為全雷射投影，共計9座影廳，
+												總座席為660席，將為府城觀眾帶來更多元選擇。亦是威秀影城在台灣的第16家影城。※本影城為方便消費者，亦設有無障礙空間。●輪椅席：18席
+												(每個影廳2席)●無障礙電梯：11-13樓1座●無障礙廁所：11-13樓層均有1座。本據點共9座影廳642席座位、18席無障礙座位。</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater15'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>威秀影城以最高規格配備打造台南南紡威秀影城，讓觀影享受全面升級，一次到位！A1館(1~11廳)設有一座數位IMAX影廳以及兩座GOLD CLASS
+												頂級影廳，外加七座標準影廳；IMAX影廳使您同步體驗好萊塢最新強檔影片效果，GOLD CLASS讓您享受食尚雅緻的完美服務。A2館(21廳~25廳)設有五座
+												全雷射影廳，提供更多影片內容，讓台南南紡威秀影城成為台南最多影廳的單一影城，提供府城影迷們嶄新尊榮享受，給足各類觀影需求。※本影城為方便
+												消費者，亦設有無障礙空間。●輪椅席(共37席次)：第1-8廳-各3席、第9廳-4席、第10-11廳-各1席、第21-25廳-各2席●無障礙電梯：中華東路北側入
+												口處●無障礙廁所：第3廳旁、第23廳旁、GOLD CLASS影廳內亦設有●無障礙購票櫃檯：INFORMATION●影廳入口走道扶手設置：第1-9廳、第21-25廳
+												皆有設置。本據點共15座影廳2,555席座位、37席無障礙座位，內含：1座IMAX影廳 390個座位（4個無障礙座位）2座GOLD CLASS影廳 80個座位
+												(2個無障礙座位)</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater16'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>座落於市中心精華區的高雄威秀影城，地處高雄百貨匯集區，縱貫高雄大遠百13樓至16樓的樓層面積，強調舒適及空間感的國際級電影城，
+												在影音設備及電影行銷活動上，帶給南台灣消費者最高品質的享受！高雄捷運通車後，便捷的交通與優質的地理位置，使高雄威秀影城成為結合百貨流行
+												、休閒娛樂與流行時尚的都會地標，滿足所有南台灣朋友們的需求。※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共34個席次)：第3、5、12、
+												13廳-各3席，第1、2、6、7、8、9、10、11、14、15廳-各2席，、第16、17廳-各1席●無障礙電梯：大遠百7號電梯，搭至十二樓●無障礙廁所：
+												十三樓、十五樓男生化妝室旁邊各1間。本據點共16座影廳2,488席座位、34席無障礙座位，內含：1座4DX影廳 92個座位（2個無障礙座位）
+												1座IMAX影廳 271個座位（3個無障礙座位）2座GOLD CLASS影廳 62個座位</strong></p>
+										</div>
+										{% endif %}
+										{% if result == 'theater17'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>身為台灣影城的領導品牌，為了給影迷最佳觀影體驗，花蓮新天堂樂園威秀影城更結合IMAX雷射影廳，以超越4K嶄新光學技術，表現絢麗鮮明色彩，
+												全新12.1聲道環繞音響體驗，全面滿足東部發燒友影迷們期待。此外，也規劃了沙發廳A+廳，讓影迷除了在娛樂觀影之外，亦能以不同的形式來包廳進行主題
+												式的活動。推出42個頂極沙發座椅，給影迷看得舒適，享受尊榮奢華。由台開集團規劃興建，威秀影城管理的花蓮新天堂樂園威秀影城，以經典電影《新天堂
+												樂園》為名，充滿了濃厚的復古電影懷舊感，但整棟建築風格都是前衛先進的科技設備。※本影城為方便消費者，亦設有無障礙空間。●輪椅席(共12個席次)
+												：B至D廳-各2席，IMAX影廳-4席，A+廳-2席。本據點共5座影廳750席座位、12席無障礙座位，內含：一座IMAX影廳368個座位（4個無障礙座位）
+												一座A+沙發廳42個座位（2個無障礙座位）</strong></p>
+										</div>
+										{% endif %}
+						            		<div class="ads">
+												<img src="/static/ads1.png" alt="">
+											</div>
+						            	</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/plugins2.js"></script>
+<script src="/static/js/custom.js"></script>
+</body>
+
+<!-- celebritysingle12:18-->
+</html>

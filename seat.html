@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<!-- bloglist12:18-->
+<head>
+	<!-- Basic need -->
+	<title>Open Pediatrics</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="/static/plugins.css">
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/ourcss.css">
+
+</head>
+<body>
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="/static/logo.png" alt="" width="150" height="150">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- BEGIN | Header -->
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="/"><img class="logo" src="/static/logo.png" alt="" width="80" height="80"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
+							首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/">Home</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							電影介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/movie3%3Fmovie%3Dmovie1">Avengers: Endgame</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie2">BLACK PANTHER WAKANDA FOREVER</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie3">TOP GUN: MAVERICK</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie4">Captain America: The Winter Soldier</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie5">Eternals</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie6">Doctor Strange in the Multiverse of Madness</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie7">Mission: Impossible – Fallout</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie8">Kingsman: The Secret Service</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie9">那些年，我們一起追的女孩</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie10">COCO</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							影城介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="theater.html">Theater</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							會員專區<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="member.html">Member Info</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+	    
+	    <!-- top search form -->
+	    <div class="top-search">
+	    	<select>
+				<option value="united">TV show</option>
+				<option value="saab">Others</option>
+			</select>
+			<input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+	    </div>
+	</div>
+</header>
+<!-- END | Header -->
+
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>座位表</h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="#">訂票</a></li>
+						<li> <span class="ion-ios-arrow-right"></span>座位表</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- blog list section-->
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<div style='display: flex;'>
+					<a name = 'movie' class='show' value={{movie}}>{{movie}}</a>&emsp;
+					<a name = 'theater' class='show' value={{theater}}>{{theater}}</a>&emsp;
+					{% if date == 'date1'%}
+						<a name = 'date' class='show' value='1/13'>1/13</a>&emsp;
+					{%endif%}
+					{% if date == 'date2'%}
+						<a name = 'date' class='show' value='1/14'>1/14</a>&emsp;
+					{%endif%}
+					{% if date == 'date3'%}
+						<a name = 'date' class='show' value='1/15'>1/15</a>&emsp;
+					{%endif%}
+					{% if date == 'date4'%}
+						<a name = 'date' class='show' value='1/16'>1/16</a>&emsp;
+					{%endif%}
+					{% if date == 'date5'%}
+						<a name = 'date' class='show' value='1/17'>1/17</a>&emsp;
+					{%endif%}
+					{% if time == 'time1'%}
+						<a name = 'time' class='show' value='9:30'>9:30</a>&emsp;
+					{%endif%}
+					{% if time == 'time2'%}
+						<a name = 'time' class='show' value='12:30'>12:30</a>&emsp;
+					{%endif%}
+					{% if time == 'time3'%}
+						<a name = 'time' class='show' value='18:30'>18:30</a>&emsp;
+					{%endif%}
+					{% if ticket1 != '選擇數量'%}
+						<a name = 'ticket' class='show' value={{ticket1}}>一般票 x{{ticket1}}</a>&emsp;
+					{%endif%}
+					{% if ticket2 != '選擇數量'%}
+						<a name = 'ticket2' class='show' value={{ticket2}}>學生票 x{{ticket2}}</a>&emsp;
+					{%endif%}
+					{% if ticket3 != '選擇數量'%}
+						<a name = 'ticket3' class='show' value={{ticket3}}>敬老票 x{{ticket3}}</a>&emsp;
+					{%endif%}
+					{% if food1 != '選擇數量'%}
+						<a name = 'food1' class='show' value={{food1}}>可樂（大）x{{food1}}</a>&emsp;
+					{%endif%}
+					{% if food2 != '選擇數量'%}
+						<a name = 'food2' class='show' value={{food2}}>可樂（中）x{{food2}}</a>&emsp;
+					{%endif%}
+					{% if food3 != '選擇數量'%}
+						<a name = 'food3' class='show' value={{food3}}>可樂（小）x{{food3}}</a>&emsp;
+					{%endif%}
+					{% if food4 != '選擇數量'%}
+						<a name = 'food4' class='show' value={{food4}}>爆米花（大）x{{food4}}</a>&emsp;
+					{%endif%}
+					{% if food5 != '選擇數量'%}
+						<a name = 'food5' class='show' value={{food5}}>爆米花（中）x{{food5}}</a>&emsp;
+					{%endif%}
+					{% if food6 != '選擇數量'%}
+						<a name = 'food6' class='show' value={{food6}}>爆米花（小）x{{food6}}</a>&emsp;
+					{%endif%}
+					{% if food7 != '選擇數量'%}
+						<a name = 'food7' class='show' value={{food7}}>熱狗 x{{food7}}</a>&emsp;
+					{%endif%}
+					{% if food8 != '選擇數量'%}
+						<a name = 'food8' class='show' value={{food8}}>吉拿棒 x{{food8}}</a>&emsp;
+                	{%endif%}
+				</div>
+				<br>
+				<form method='POST' action=''>
+				<div class='seatcontainer'>
+					<div>
+						<font color="#fff">A</font>&emsp;&emsp;
+						<label>
+							<input type='checkbox' name='seats' value='a1'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a2'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a3'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a4'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a5'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a6'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a7'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a8'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a9'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a10'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a11'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='a12'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<font color="#fff">B</font>&emsp;&emsp;
+						<label>
+							<input type='checkbox' name='seats' value='b1'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b2'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b3'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b4'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b5'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b6'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b7'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b8'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b9'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b10'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b11'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='b12'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<font color="#fff">C</font>&emsp;&emsp;
+						<label>
+							<input type='checkbox' name='seats' value='c1'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c2'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c3'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c4'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c5'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c6'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c7'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c8'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c9'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c10'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c11'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='c12'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<font color="#fff">D</font>&emsp;&emsp;
+						<label>
+							<input type='checkbox' name='seats' value='d1'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d2'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d3'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d4'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d5'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d6'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d7'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d8'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d9'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d10'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d11'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='d12'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<font color="#fff">E</font>&emsp;&emsp;
+						<label>
+							<input type='checkbox' name='seats' value='e1'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e2'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e3'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e4'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e5'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e6'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e7'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e8'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e9'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e10'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					&emsp;&emsp;&emsp;
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e11'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+					<div>
+						<label>
+							<input type='checkbox' name='seats' value='e12'>
+							<span class'list'>0</span>
+						</label>
+					</div>
+				</div>
+			<br><br>
+			</div>
+			<div class="col-md-3 col-xs-12 col-sm-12">
+				<div class="sidebar">
+						<div class="searh-form">
+						<h4 class="sb-title">Label</h4>
+						<div class="form-style-1 celebrity-form">
+							<div class="row">
+								<div class="col-md-12 form-it">
+									<a name = '' class='labelbtn' id='seate12'>O</a>&emsp;
+									<label>Unselected</label>
+								</div>
+								<div class="col-md-12 form-it">
+									<a name = '' class='labelbtn' id='seate12'>X</a>&emsp;
+									<label>Selected</label>
+								</div>
+							</div>
+							<br><br><br><br>
+							<a href='/pay' type='submit' class='fgpwdbtn' id='next'>Next</a>
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/plugins2.js"></script>
+<script src="/static/js/custom.js"></script>
+<script src="/static/js/ourjquery.js"></script>
+</body>
+
+<!-- bloglist12:22-->
+</html>

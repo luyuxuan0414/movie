@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<!-- bloglist12:18-->
+<head>
+	<!-- Basic need -->
+	<title>Open Pediatrics</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="/static/plugins.css">
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/ourcss.css">
+
+</head>
+<body>
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="/static/logo.png" alt="" width="150" height="150">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--end of preloading-->
+<!--login form popup-->
+<div class="login-wrapper" id="login-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>Login</h3>
+        <form method="POST" action="#">
+        	<div class="row">
+        		 <label for="memberid">
+                    Member ID:
+                    <input type="text" name="memberid" id="memberid" placeholder="Bxxxxxxx" required="required" />
+                </label>
+        	</div>
+           
+            <div class="row">
+            	<label for="password">
+                    Password:
+                    <input type="password" name="password" id="password" placeholder="******" required="required" />
+                </label>
+            </div>
+            <div class="row">
+            	<div class="remember">
+					<div>
+						<input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
+					</div>
+            		<a href="forgetpwd.html" class = 'forgetpwd' id = 'forget'  onclick = 'forget();'>Forget password ?</a>
+            	</div>
+            </div>
+           <div class="row">
+           	 <button type="submit" name="submit">Login</button>
+           </div>
+        </form>
+    </div>
+</div>
+<div class='i'>
+	<p>{{i}}</p>
+</div>
+<!--end of login form popup-->
+<!--signup form popup-->
+<div class="login-wrapper"  id="signup-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>sign up</h3>
+        <form method="POST" action="#">
+            <div class="row">
+                 <label for="memberid-2">
+                    Member ID:
+                    <input type="text" name="memberid2" id="memberid-2" placeholder="Bxxxxxxx" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="password-2">
+                    Password:
+                    <input type="password" name="password2" id="password-2" placeholder="" required="required">
+                </label>
+            </div>
+             <div class="row">
+                <label for="repassword-2">
+                    re-type Password:
+                    <input type="password" name="password3" id="repassword-2" placeholder="" required="required">
+                </label>
+            </div>
+			<div class="row">
+                <label for="name-2">
+                    Name:
+                    <input type="text" name="name2" id="name-2" placeholder="" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="birthday-2">
+                   Birthday:
+                    <input type="date" name="birthday2" id="birthday-2" placeholder="" pattern="" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="phone-2">
+                   Phone:
+                    <input type="text"  maxlength="10" name="phone2" id="phone-2" placeholder="09xxxxxxxx" pattern="09\d{8}"required="required">
+                </label>
+            </div>
+            <div class="row">
+                <label for="email-2">
+                   Email:
+                    <input type="text" name="email2" id="email-2" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"placeholder="xxxxxxx@gmail.com" required="required">
+                </label>
+			</div>
+           <div class="row">
+             <button type="submit" name="submit2">sign up</button>
+           </div>
+        </form>
+    </div>
+</div>
+<!--end of signup form popup-->
+
+<!-- BEGIN | Header -->
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="/"><img class="logo" src="/static/logo.png" alt="" width="80" height="80"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
+							首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/">Home</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							電影介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/movie3%3Fmovie%3Dmovie1">Avengers: Endgame</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie2">BLACK PANTHER WAKANDA FOREVER</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie3">TOP GUN: MAVERICK</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie4">Captain America: The Winter Soldier</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie5">Eternals</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie6">Doctor Strange in the Multiverse of Madness</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie7">Mission: Impossible – Fallout</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie8">Kingsman: The Secret Service</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie9">那些年，我們一起追的女孩</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie10">COCO</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							影城介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="theater.html">Theater</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							會員專區<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="member.html">Member Info</a></li>
+								<li><a href="record.html">Booking Record</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav flex-child-menu menu-right">
+						<li class="dropdown first">
+						<li class="loginLink"><a href="#">LOG In</a></li>
+						<li class="btn signupLink"><a href="#">sign up</a></li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+	    
+	    <!-- top search form -->
+	    <div class="top-search">
+	    	<select>
+				<option value="united">TV show</option>
+				<option value="saab">Others</option>
+			</select>
+			<input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+	    </div>
+	</div>
+</header>
+<!-- END | Header -->
+
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>會員詳細資料</h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="#">首頁</a></li>
+						<li> <span class="ion-ios-arrow-right"></span>會員詳細資料</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- blog list section-->
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<div class="blog-item-style-1 blog-item-style-3">
+            		<img src = "/static/memberid.png" alt = "memberid" style = "float: left; margin: 15px">
+					<div class="blog-it-infor">
+						<h3><a href="#">Member ID</a></h3>
+						{% for i in result %}
+                			{% if result.index(i) == 1%}
+								<p name="memberID">{{i}}</p>
+                			{%endif%}
+						{%endfor%}
+            		</div>
+            	</div>
+            	<div class="blog-item-style-1 blog-item-style-3">
+            		<img src = "/static/password.png" alt = "password" style = "float: left; margin: 15px">
+            		<div class="blog-it-infor">
+						<h3><a href="#">Password</a></h3>
+						{% for i in result %}
+                			{% if result.index(i) == 2%}
+                				<p>{{i}}</p>
+                			{%endif%}
+						{%endfor%}
+					</div>
+            	</div>
+				<div class="blog-item-style-1 blog-item-style-3">
+            		<img src = "/static/name.png" alt = "name" style = "float: left; margin: 15px">
+            		<div class="blog-it-infor">
+						<h3><a href="#">Name</a></h3>
+						{% for i in result %}
+                			{% if result.index(i) == 3%}
+                				<p>{{i}}</p>
+                			{%endif%}
+						{%endfor%}
+            		</div>
+            	</div>
+            	<div class="blog-item-style-1 blog-item-style-3">
+            		<img src = "/static/birthday.png" alt = "birthday" style = "float: left; margin: 15px">
+            		<div class="blog-it-infor">
+						<h3><a href="#">Birthday</a></h3>
+						{% for i in result %}
+                			{% if result.index(i) == 4%}
+                				<p>{{i}}</p>
+                			{%endif%}
+						{%endfor%}
+            		</div>
+            	</div>
+            	<div class="blog-item-style-1 blog-item-style-3">
+            		<img src = "/static/phone.png" alt = "phone" style = "float: left; margin: 15px">
+            		<div class="blog-it-infor">
+						<h3><a href="#">Phone</a></h3>
+						{% for i in result %}
+                			{% if result.index(i) == 5%}
+                				<p>{{i}}</p>
+                			{%endif%}
+						{%endfor%}
+            		</div>
+				</div>
+				<div class="blog-item-style-1 blog-item-style-3">
+            		<img src = "/static/email.png" alt = "email" style = "float: left; margin: 15px">
+            		<div class="blog-it-infor">
+						<h3><a href="#">Email</a></h3>
+						{% for i in result %}
+                			{% if result.index(i) == 6%}
+                				<p>{{i}}</p>
+                			{%endif%}
+						{%endfor%}
+            		</div>
+				</div>
+				<div class="blog-item-style-1 blog-item-style-3">
+            		<img src = "/static/points.png" alt = "email" style = "float: left; margin: 15px">
+            		<div class="blog-it-infor">
+						<h3><a href="#">Points</a></h3>
+						{% for i in result %}
+                			{% if result.index(i) == 6%}
+                				<p>100</p>
+                			{%endif%}
+						{%endfor%}
+            		</div>
+				</div>
+				{% for i in result %}
+                	{% if result.index(i) == 6%}
+					<a href="modify.html" class='fgpwdbtn' id='modify'>修改資料</a>
+                	{%endif%}
+				{%endfor%}
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	function check(){
+		alert('登入成功');
+	}
+	function check2(){
+		alert('登入失敗');
+	}
+	function check3(){
+		alert('註冊成功');
+	}
+</script>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/plugins2.js"></script>
+<script src="/static/js/custom.js"></script>
+</body>
+
+<!-- bloglist12:22-->
+</html>

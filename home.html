@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en" class="no-js">
+
+<!-- homev206:52-->
+<head>
+	<!-- Basic need -->
+	<title>訂票首頁</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="/static/plugins.css">
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/ourcss.css">
+
+</head>
+<body>
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="/static/logo.png" alt="" width="150" height="150">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--end of preloading-->
+<!--login form popup-->
+<div class="login-wrapper" id="login-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>Login</h3>
+        <form method="POST" action="#">
+        	<div class="row">
+        		 <label for="memberid">
+                    Member ID:
+                    <input type="text" name="memberid" id="memberid" placeholder="Bxxxxxxx" required="required" />
+                </label>
+        	</div>
+           
+            <div class="row">
+            	<label for="password">
+                    Password:
+                    <input type="password" name="password" id="password" placeholder="******" required="required" />
+                </label>
+            </div>
+            <div class="row">
+            	<div class="remember">
+					<div>
+						<input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
+					</div>
+            		<a href="forgetpwd.html" class = 'forgetpwd' id = 'forget'  onclick = 'forget();'>Forget password ?</a>
+            	</div>
+            </div>
+           <div class="row">
+           	 <button type="submit" name="submit">Login</button>
+           </div>
+        </form>
+    </div>
+</div>
+<div class='i'>
+	<p>{{i}}</p>
+</div>
+<!--end of login form popup-->
+<!--signup form popup-->
+<div class="login-wrapper"  id="signup-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>sign up</h3>
+        <form method="POST" action="#">
+            <div class="row">
+                 <label for="memberid-2">
+                    Member ID:
+                    <input type="text" name="memberid2" id="memberid-2" placeholder="Bxxxxxxx" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="password-2">
+                    Password:
+                    <input type="password" name="password2" id="password-2" placeholder="" required="required">
+                </label>
+            </div>
+             <div class="row">
+                <label for="repassword-2">
+                    re-type Password:
+                    <input type="password" name="password3" id="repassword-2" placeholder="" required="required">
+                </label>
+            </div>
+			<div class="row">
+                <label for="name-2">
+                    Name:
+                    <input type="text" name="name2" id="name-2" placeholder="" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="birthday-2">
+                   Birthday:
+                    <input type="date" name="birthday2" id="birthday-2" placeholder="" pattern="" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="phone-2">
+                   Phone:
+                    <input type="text" name="phone2" id="phone-2" placeholder="" required="required">
+                </label>
+            </div>
+            <div class="row">
+                <label for="email-2">
+                   Email:
+                    <input type="text" name="email2" id="email-2" placeholder="" required="required">
+                </label>
+			</div>
+           <div class="row">
+             <button type="submit" name="submit2">sign up</button>
+           </div>
+        </form>
+    </div>
+</div>
+<!--end of signup form popup-->
+
+<!-- BEGIN | Header -->
+<header class="ht-header full-width-hd" style = 'background-color:#2B3740'>
+		<div class="row">
+			<nav id="mainNav" class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="/"><img class="logo" src="/static/logo.png" alt="" width="80" height="80"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/">Home</a></li>
+							</ul>
+						</li>	
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							電影介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/movie3%3Fmovie%3Dmovie1">Avengers: Endgame</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie2">BLACK PANTHER WAKANDA FOREVER</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie3">TOP GUN: MAVERICK</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie4">Captain America: The Winter Soldier</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie5">Eternals</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie6">Doctor Strange in the Multiverse of Madness</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie7">Mission: Impossible – Fallout</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie8">Kingsman: The Secret Service</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie9">那些年，我們一起追的女孩</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie10">COCO</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							影城介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="theater.html">Theater</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							會員專區<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="member.html">Member Info</a></li>
+								<li><a href="record.html">Booking Record</a></li>
+							</ul>
+						</li>
+						<!--<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							community <i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="userfavoritegrid.html">user favorite grid</a></li>
+								<li><a href="userfavoritelist.html">user favorite list</a></li>
+								<li><a href="userprofile.html">user profile</a></li>
+								<li class="it-last"><a href="userrate.html">user rate</a></li>
+							</ul>
+						</li>-->
+					</ul>
+					<ul class="nav navbar-nav flex-child-menu menu-right">
+						<li class="dropdown first">
+							<!--<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							pages <i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="landing.html">Landing</a></li>
+								<li><a href="404.html">404 Page</a></li>
+								<li class="it-last"><a href="comingsoon.html">Coming soon</a></li>
+							</ul>
+						</li>                
+						<li><a href="#">Help</a></li>-->
+						<li class="loginLink"><a href="#">LOG In</a></li>
+						<li class="btn signupLink"><a href="#">sign up</a></li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+	    <!-- search form -->
+		</div>
+	
+</header>
+<!-- END | Header -->
+<form methods="get" action="movie2">
+<div class="slider sliderv2" style = 'background-color:black'>
+	<div class="container">
+		<div class="row">
+	    	<div class="slider-single-item">
+	    		<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">Avengers: Endgame<br>
+								<span>2019</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie1" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+								
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>9.5</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 3h5’ </li>
+			    						<li>  Rated: PG-13  </li>
+			    						<li>  Release: 24 Apr 2019</li>
+			    					</ul>
+								</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie1" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie1" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>		
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie1.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+				<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">BLACK PANTHER WAKANDA FOREVER<br>
+								<span>2022</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie2" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>8.5</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h41’ </li>
+			    						<li>  Rated: PG-6  </li>
+			    						<li>  Release: 09 Nov 2022</li>
+			    					</ul>
+								</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie2" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie2" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>		
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie2.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+				<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">TOP GUN: MAVERICK<br>
+								<span>2022</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie3" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>9.9</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 3h5’ </li>
+			    						<li>  Rated: PG-13  </li>
+			    						<li>  Release: 25 May 2022</li>
+			    					</ul>
+			    				</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie3" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie3" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>	
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie3.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+			<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">Captain America: The Winter Soldier<br>
+								<span>2014</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie4" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>7.2</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 3h5’ </li>
+			    						<li>  Rated: PG-13  </li>
+			    						<li>  Release: 4 Apr 2014</li>
+			    					</ul>
+			    				</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie4" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie4" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>		
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie4.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+				<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">Eternals<br>
+								<span>2021</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie5" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>7.6</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 3h5’ </li>
+			    						<li>  Rated: PG-13  </li>
+			    						<li>  Release: 5 Nov 2021</li>
+			    					</ul>
+			    				</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie5" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie5" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>		
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie5.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+	    		<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">Doctor Strange in the Multiverse of Madness<br>
+							    <span>2022</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie6" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>9.3</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h21’ </li>
+			    						<li>  Rated: PG-13  </li>
+			    						<li>  Release: 4 May 2022</li>
+			    					</ul>
+			    				</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie6" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie6" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie6.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+				<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">Mission: Impossible – Fallout<br>
+								<span>2018</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie7" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>8.8</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h41’ </li>
+			    						<li>  Rated: PG-6  </li>
+			    						<li>  Release: 25 July 2018</li>
+			    					</ul>
+			    				</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie7" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie7" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>		
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie7.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+				<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">Kingsman: The Secret Service<br>
+								<span>2015</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie8" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>7.2</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h41’ </li>
+			    						<li>  Rated: PG-6  </li>
+			    						<li>  Release: 24 Jan 2015</li>
+			    					</ul>
+			    				</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie8" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie8" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>		
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie8.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+				<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">那些年，我們一起追的女孩<br>
+								<span>2011</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie9" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>7.0</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h41’ </li>
+			    						<li>  Rated: PG-6  </li>
+			    						<li>  Release: 19 Aug 2011</li>
+			    					</ul>
+			    				</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie9" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie9" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>		
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie9.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+				<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">COCO<br>
+								<span>2017</span></a></h1>
+								<div class="social-btn">
+									<a href="/movie3%3Fmovie%3Dmovie10" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									
+									<div class="hover-bnt">
+										
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>8.1</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h41’ </li>
+			    						<li>  Rated: PG-6  </li>
+			    						<li>  Release: 09 Nov 2017</li>
+			    					</ul>
+			    				</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="movie3%3Fmovie%3Dmovie10" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "movie3%3Fmovie%3Dmovie10" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>	
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="/static/movie10.jpg" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+</div>
+</form>	
+<div class="movie-items  full-width">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="title-hd">
+				<h2>熱映中 In Theater</h2>
+				<a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+			</div>
+			<div class="tabs">
+				<ul class="tab-links">
+					<li class="active"><a href="#tab1-h2">#Popular</a></li>
+					<li><a href="#tab2-h2">  #Top5 rated  </a></li>
+					<li><a href="#tab3-h2"> #Most reviewed</a></li>                        
+				</ul>
+			    <div class="tab-content">
+			        <div id="tab1-h2" class="tab active">
+			            <div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie1.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie1" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">ADVENGERS:ENDGAME</a></h6>
+				            				<p><i class="ion-android-star"></i><span>9.5</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+									<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie2.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie2" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">BLACK PANTHER WAKANDA FOREVER</a></h6>
+				            				<p><i class="ion-android-star"></i><span>8.5</span> /10</p>
+				            			</div>
+				            		</div>
+								</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie3.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie3" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">TOP GUN: MAVERICK</a></h6>
+				            				<p><i class="ion-android-star"></i><span>9.9</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie4.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie4" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Captain America: The Winter Soldier</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.2</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie5.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie5" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Eternals</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.6</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie6.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie6" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Doctor Strange in the Multiverse of Madness</a></h6>
+				            				<p><i class="ion-android-star"></i><span>9.3</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie7.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie7" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">MISSION IMPOSSIBLE : FALL OUT</a></h6>
+				            				<p><i class="ion-android-star"></i><span>8.8</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie8.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie8" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">KINGSMAN : THE SECRET SERVICE</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.2</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie9.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie9" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">那些年，我們一起追的女孩</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.0</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie10.jpg" alt="">
+										</div>
+										<div class="hvr-inner">
+											<a href="movie3%3Fmovie%3Dmovie10" name="movie" value="movie10">see more</button>
+										</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">COCO</a></h6>
+				            				<p><i class="ion-android-star"></i><span>8.1</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+			        </div>
+			        <div id="tab2-h2" class="tab">
+					<!--TOP5 RATED-->
+			           <div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie3.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="movie3%3Fmovie%3Dmovie3" name="movie" value="movie10"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">TOP GUN: MAVERICK</a></h6>
+				            				<p><i class="ion-android-star"></i><span>9.9</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie1.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="movie3%3Fmovie%3Dmovie1" name="movie" value="movie10"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">ADVENGERS:ENDGAME</a></h6>
+				            				<p><i class="ion-android-star"></i><span>9.5</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie6.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="movie3%3Fmovie%3Dmovie6" name="movie" value="movie10"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Doctor Strange in the Multiverse of Madness</a></h6>
+				            				<p><i class="ion-android-star"></i><span>9.3</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie7.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="movie3%3Fmovie%3Dmovie7" name="movie" value="movie10"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">MISSION IMPOSSIBLE : FALL OUT</a></h6>
+				            				<p><i class="ion-android-star"></i><span>8.8</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+									<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie2.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="movie3%3Fmovie%3Dmovie2" name="movie" value="movie10"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">BLACK PANTHER WAKANDA FOREVER</a></h6>
+				            				<p><i class="ion-android-star"></i><span>8.5</span> /10</p>
+				            			</div>
+				            		</div>
+								</div>
+			            	</div>
+			            </div>
+			        </div>
+			        <div id="tab3-h2" class="tab">
+			        	<div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie3.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="movie3%3Fmovie%3Dmovie3" name="movie" value="movie10"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">TOP GUN: MAVERICK</a></h6>
+				            				<p><i class="ion-android-star"></i><span>9.9</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/movie1.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="movie3%3Fmovie%3Dmovie1" name="movie" value="movie10"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">ADVENGERS:ENDGAME</a></h6>
+				            				<p><i class="ion-android-star"></i><span>9.5</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		
+			            		
+			            	</div>
+			            </div>
+		       	 	</div>
+		       	 	 <div id="tab4-h2" class="tab">
+			        	<div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/mv-it5.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/mv-it6.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/mv-it7.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/mv-it8.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+		       	 	</div>
+			    </div>
+			</div>
+		<form methods='get', action='cmovie2'>
+			<div class="title-hd">
+				<h2>即將上映 COMING SOON</h2>
+				<a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+			</div>
+			<div class="tabs">
+				<ul class="tab-links-2">
+					<li class="active"><a href="#tab21-h2">#Coming Soon</a></li>                       
+				</ul>
+			    <div class="tab-content">
+			        <div id="tab21-h2" class="tab active">
+			            <div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="static/cmovie1.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="cmovie3%3Fmovie%3Dmovie11" name="movie" value="movie11"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">THE FIRST SLAM DUNK</a></h6>
+				            				<p>2023/01/23</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+									<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="static/cmovie2.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="cmovie3%3Fmovie%3Dmovie12" name="movie" value="movie12"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">OPERATION FORTUNE : RUSE DE GUERRE</a></h6>
+				            				<p>2023/01/19</p>
+				            			</div>
+				            		</div>
+								</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="static/cmovie3.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="cmovie3%3Fmovie%3Dmovie13" name="movie" value="movie13"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">ON THE EDGE</a></h6>
+				            				<p>2023/01/06</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="static/cmovie4.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="cmovie3%3Fmovie%3Dmovie14" name="movie" value="movie14"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">SIMONE</a></h6>
+				            				<p>2023/01/06</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="static/cmovie5.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="cmovie3%3Fmovie%3Dmovie15" name="movie" value="movie15"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">想見你</a></h6>
+				            				<p>2022/12/30</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="static/cmovie6.jpg" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="cmovie3%3Fmovie%3Dmovie16" name="movie" value="movie16"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">紳探追緝令</a></h6>
+				            				<p>2023/01/06</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/mv-it7.jpg" alt="">
+				            			</div>
+				            			
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="/static/mv-it8.jpg" alt="">
+				            			</div>
+				            			
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+			        </div>
+		</form>        
+			            		
+				            			
+				            	
+			            	</div>
+			            </div>
+		       	 	</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-auto">
+          <p>Copyright © 2022 <a href="#">威秀影城</a> CGUAI軟體工程 ,  All rights reserved.
+          &nbsp;&nbsp;
+          Designed by <a title="HTML CSS Templates" rel="sponsored" href="https://templatemo.com" target="_blank">CGUAI_GROUP13</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/plugins2.js"></script>
+<script src="/static/js/custom.js"></script>
+</body>
+
+<!-- homev207:28-->
+</html>

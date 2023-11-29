@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<!-- celebritysingle12:04-->
+<head>
+	<!-- Basic need -->
+	<title>電影介紹</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="/static/plugins.css">
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="/static/ourcss.css">
+
+</head>
+<body>
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="/static/logo.png" alt="" width="150" height="150">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--end of preloading-->
+<!--login form popup-->
+<div class="login-wrapper" id="login-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>Login</h3>
+        <form method="POST" action="#">
+        	<div class="row">
+        		 <label for="memberid">
+                    Member ID:
+                    <input type="text" name="memberid" id="memberid" placeholder="Bxxxxxxx" required="required" />
+                </label>
+        	</div>
+           
+            <div class="row">
+            	<label for="password">
+                    Password:
+                    <input type="password" name="password" id="password" placeholder="******" required="required" />
+                </label>
+            </div>
+            <div class="row">
+            	<div class="remember">
+					<div>
+						<input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
+					</div>
+            		<a href="forgetpwd.html" class = 'forgetpwd' id = 'forget'  onclick = 'forget();'>Forget password ?</a>
+            	</div>
+            </div>
+           <div class="row">
+           	 <button type="submit" name="submit">Login</button>
+           </div>
+        </form>
+    </div>
+</div>
+<div class='i'>
+	<p>{{i}}</p>
+</div>
+<!--end of login form popup-->
+<!--signup form popup-->
+<div class="login-wrapper"  id="signup-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>sign up</h3>
+        <form method="POST" action="#">
+            <div class="row">
+                 <label for="memberid-2">
+                    Member ID:
+                    <input type="text" name="memberid2" id="memberid-2" placeholder="Bxxxxxxx" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="password-2">
+                    Password:
+                    <input type="password" name="password2" id="password-2" placeholder="" required="required">
+                </label>
+            </div>
+             <div class="row">
+                <label for="repassword-2">
+                    re-type Password:
+                    <input type="password" name="password3" id="repassword-2" placeholder="" required="required">
+                </label>
+            </div>
+			<div class="row">
+                <label for="name-2">
+                    Name:
+                    <input type="text" name="name2" id="name-2" placeholder="" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="birthday-2">
+                   Birthday:
+                    <input type="date" name="birthday2" id="birthday-2" placeholder="" pattern="" required="required">
+                </label>
+			</div>
+			<div class="row">
+                <label for="phone-2">
+                   Phone:
+                    <input type="text" name="phone2" id="phone-2" placeholder="" required="required">
+                </label>
+            </div>
+            <div class="row">
+                <label for="email-2">
+                   Email:
+                    <input type="text" name="email2" id="email-2" placeholder="" required="required">
+                </label>
+			</div>
+           <div class="row">
+             <button type="submit" name="submit2">sign up</button>
+           </div>
+        </form>
+    </div>
+</div>
+<!--end of signup form popup-->
+
+<!-- BEGIN | Header -->
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="/"><img class="logo" src="/static/logo.png" alt="" width="80" height="80"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
+							首頁<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/">Home</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							電影介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="/movie3%3Fmovie%3Dmovie1">Avengers: Endgame</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie2">BLACK PANTHER WAKANDA FOREVER</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie3">TOP GUN: MAVERICK</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie4">Captain America: The Winter Soldier</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie5">Eternals</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie6">Doctor Strange in the Multiverse of Madness</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie7">Mission: Impossible – Fallout</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie8">Kingsman: The Secret Service</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie9">那些年，我們一起追的女孩</a></li>
+								<li><a href="/movie3%3Fmovie%3Dmovie10">COCO</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							影城介紹<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="theater.html">Theater</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							會員專區<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="member.html">Member Info</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav flex-child-menu menu-right">
+						<li class="dropdown first">
+						<li class="loginLink"><a href="#">LOG In</a></li>
+						<li class="btn signupLink"><a href="#">sign up</a></li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+	    
+	    <!-- top search form -->
+	    <div class="top-search">
+	    	<select>
+				<option value="united">TV show</option>
+				<option value="saab">Others</option>
+			</select>
+			<input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+	    </div>
+	</div>
+</header>
+<!-- END | Header -->
+
+<div class="hero hero3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- celebrity single section-->
+
+<div class="page-single movie-single cebleb-single">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				{% if result == 'movie1'%}
+				<div class="mv-ceb">
+					<img src="/static/movie1.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'movie2'%}
+				<div class="mv-ceb">
+					<img src="/static/movie2.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'movie3'%}
+				<div class="mv-ceb">
+					<img src="/static/movie3.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'movie4'%}
+				<div class="mv-ceb">
+					<img src="/static/movie4.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'movie5'%}
+				<div class="mv-ceb">
+					<img src="/static/movie5.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'movie6'%}
+				<div class="mv-ceb">
+					<img src="/static/movie6.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'movie7'%}
+				<div class="mv-ceb">
+					<img src="/static/movie7.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'movie8'%}
+				<div class="mv-ceb">
+					<img src="/static/movie8.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'movie9'%}
+				<div class="mv-ceb">
+					<img src="/static/movie9.jpg" alt="">
+				</div>
+				{%endif%}
+				{% if result == 'movie10'%}
+				<div class="mv-ceb">
+					<img src="/static/movie10.jpg" alt="">
+				</div>
+				{%endif%}
+			</div>
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="movie-single-ct">
+					{% if result == 'movie1'%}
+						<h1 class="bd-hd">復仇者聯盟：終局之戰</h1>
+						<p class="ceb-single">Avengers: Endgame</p>
+					{% endif %}
+					{% if result == 'movie2'%}
+						<h1 class="bd-hd">黑豹２：瓦干達萬歲</h1>
+						<p class="ceb-single">BLACK PANTHER WAKANDA FOREVER</p>
+					{% endif %}
+					{% if result == 'movie3'%}
+						<h1 class="bd-hd">捍衛戰士2：獨行俠</h1>
+						<p class="ceb-single">TOP GUN: MAVERICK</p>
+					{% endif %}
+					{% if result == 'movie4'%}
+						<h1 class="bd-hd">美國隊長2：酷寒戰士</h1>
+						<p class="ceb-single">Captain America: The Winter Soldier</p>
+					{% endif %}
+					{% if result == 'movie5'%}
+						<h1 class="bd-hd">永恆族</h1>
+						<p class="ceb-single">Eternals</p>
+					{% endif %}
+					{% if result == 'movie6'%}
+						<h1 class="bd-hd">奇異博士2：失控多重宇宙</h1>
+						<p class="ceb-single">Doctor Strange in the Multiverse of Madness</p>
+					{% endif %}
+					{% if result == 'movie7'%}
+						<h1 class="bd-hd">不可能的任務：全面瓦解</h1>
+						<p class="ceb-single">Mission: Impossible – Fallout</p>
+					{% endif %}
+					{% if result == 'movie8'%}
+						<h1 class="bd-hd">金牌特務：間諜密令</h1>
+						<p class="ceb-single">Kingsman: The Secret Service</p>
+					{% endif %}
+					{% if result == 'movie9'%}
+						<h1 class="bd-hd">那些年，我們一起追的女孩</h1>
+						<p class="ceb-single">You Are the Apple of My Eye</p>
+					{% endif %}
+					{% if result == 'movie10'%}
+						<h1 class="bd-hd">可可夜總會</h1>
+						<p class="ceb-single">COCO</p>
+					{% endif %}
+						<div class="social-link cebsingle-socail">
+							<a href="#"><i class="ion-social-facebook"></i></a>
+							<a href="#"><i class="ion-social-twitter"></i></a>
+							<a href="#"><i class="ion-social-googleplus"></i></a>
+							<a href="#"><i class="ion-social-linkedin"></i></a>
+						</div>
+					<div class="movie-tabs">
+						<div class="tabs">
+							<ul class="tab-links tabs-mv">
+								<li class="active"><a href="#overviewceb">簡介</a></li>
+								<li><a href="#theater">訂票</a></li>
+							</ul>
+						    <div class="tab-content">
+						        <div id="overviewceb" class="tab active">
+									<div class="row">
+										{% if result == 'movie1'%}
+						            	<div class="col-md-8 col-sm-12 col-xs-12">
+						            		<p><strong>漫威的“Infinity”系列史詩般的結局成為全球廣受好評的熱議話題，復仇者聯盟將與宇宙中最強大的反派薩諾斯展開激烈的對決。
+												在毀滅性的事件抹殺了世界上一半的人口，並重挫他們的隊伍之後，剩下的英雄們掙扎著前進。但是他們必須攜手恢復宇宙的秩序與和諧，
+												並把他們愛的人帶回來。由小勞伯道尼、克里斯伊凡、馬克盧法洛、克里斯漢斯洪、史嘉蕾喬韓森、傑瑞米雷納、唐奇鐸、保羅路德、
+												班奈狄克康柏拜區、查德威克鮑斯曼、布麗拉爾森、湯姆霍蘭、凱倫吉蘭、柔伊莎達娜和伊凡潔琳莉莉主演的 《Avengers： Endgame》 
+												由凱文費奇製作，安東尼和喬羅素執導。路易斯斯波西托、維多利亞阿隆索、邁克爾格里羅、陳貞、強法夫洛、詹姆斯岡恩和史丹李擔任執行製片人，
+												克里斯托弗馬庫斯和史蒂芬麥費利撰寫劇本。某些連續閃光的片段或圖案可能會給光敏感的觀眾造成不適。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/dCPzXxoVc7A"></iframe>
+										</div>
+										{% endif %} 
+										{% if result == 'movie2'%}
+						            	<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>《黑豹２：瓦干達萬歲》描述「黑豹」帝查拉國王駕崩後，妹妹「舒莉」、王太后「拉瑪達」與恩巴庫等人努力克服傷痛，重新擁抱生活。
+												自從前國王「黑豹」宣布瓦干達對外開放後，瓦干達不得不對抗世人對汎金屬與高科技的貪婪，還得保衛國家不被神秘水底強國「塔洛坎」侵略。
+												而拯救國家最好的方式，就是團結一心，才能為王國開闢嶄新的道路。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/7uSIM6Q3OXk"></iframe>
+										</div>
+										{% endif %}
+										{% if result == 'movie3'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>《故事敘述服役超過30年，身為海軍頂尖飛行員的「獨行俠」彼得米契爾上校(湯姆克魯斯飾)仍舊堅守他的崗位，
+												以試飛員的身份不斷突破飛行極限，也放棄任何足以終止飛行生涯的晉升。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/IbsLhjGg6mg"></iframe>
+										</div>
+										{% endif %}
+										{% if result == 'movie4'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>《美國隊長2：酷寒戰士》（英語：Captain America: The Winter Soldier）是一部於2014年上映的美國超級英雄電影，
+												改編自漫威漫畫旗下的超級英雄美國隊長，本片由漫威影業製作，並由華特迪士尼影業負責發行。
+												本片為2011年電影《美國隊長》的續集，亦是漫威電影宇宙系列的第九部電影作品。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/wrk1folKIng"></iframe>
+										</div>
+										{% endif %}
+										{% if result == 'movie5'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>漫威影業的《永恆族》迎來了令人興奮的超級英雄新團隊加入漫威電影宇宙。這部史詩故事跨越千年，講述一群來自遙遠星際的不朽英雄，
+												他們自古以來就曾保護人類。當人類最古老的敵人「變異族」神秘歸來時，永恆族被迫現身，再次團結，保衛地球上的居民。
+												部分閃光片段或圖案可能會影響對光敏感的觀眾。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/1Y8jIMjTP3Y"></iframe>
+										</div>
+										{% endif %}
+										{% if result == 'movie6'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>本片由漫威影業製作，並由華特迪士尼工作室電影負責發行。 本片是2016年電影《奇異博士》的續集，亦是漫威電影宇宙的第28部電影作品，
+												屬於漫威電影宇宙第四階段。 本片由山姆·雷米執導，班奈狄克·康柏拜區回歸領銜出演奇異博士，並由伊莉莎白·歐森、霍奇爾·戈梅茲、
+												瑞秋·麥亞當斯、黃凱旋和奇維托·艾吉佛等人主演。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/mYRH8e1ui-k"></iframe>
+										</div>
+										{% endif %}
+										{% if result == 'movie7'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>《不可能的任務：全面瓦解》敘述伊森韓特與他的IMF隊員們（亞歷鮑德溫、賽門佩吉和文雷姆斯飾演）以及熟悉的盟友
+												（蕾貝卡弗格森與蜜雪兒摩娜漢所飾演），在一項任務執行失敗後，與時間賽跑試圖力挽狂瀾！這一集更加入重量級卡司：亨利卡維爾、
+												安琪拉貝瑟與凡妮莎柯比，導演是由執導《不可能的任務：失控國度》克里斯多夫麥奎瑞再度擔綱。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/LbqTJbXMCHc"></iframe>
+										</div>
+										{% endif %}
+										{% if result == 'movie8'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>由受歡迎漫畫改編，馬修范恩(Matthew Vaughn)(《特攻聯盟》(Kick-Ass)、《X戰警：第一戰》(X-Men First Class))執導的《金牌特務》
+												(Kingsman: The Secret Service)，故事敘述一個超級神秘的諜報組織，要網羅一名未經琢磨卻極有潛力年輕人加入，
+												他必須通過極具挑戰的訓練課程；而在此同時，一名思想偏差的科技天才引發的全球性威脅，正在蔓延。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/09SGl8YGA5k"></iframe>
+										</div>
+										{% endif %}
+										{% if result == 'movie9'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>故事設定在民國83年位於彰化縣的彰化縣私立精誠高級中學，該校亦是導演兼編劇九把刀的母校。 故事圍繞著調皮的男主角柯景騰（綽號「柯騰」）發展，
+												他在這間學校裡還有幾個好友，包括喜歡耍帥但在情場常常失意的曹國勝（綽號「老曹」）、想用搞笑致勝卻總是失敗的廖英宏（綽號「該邊」）
+												、體型偏胖但成績好的謝明和（綽號「阿和」）等人。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/MFb0pKRFDTM"></iframe>
+										</div>
+										{% endif %}
+										{% if result == 'movie10'%} 
+										<div class="col-md-8 col-sm-12 col-xs-12">
+											<p><strong>故事描述一位對吉他執著且懷抱夢想的小男孩米高，由於他的祖太婆被吉他手拋棄，家族因此唾棄音樂且從事製鞋業。有一天，
+												米高誤闖進死人的世界，這次的「死亡遭遇」顛覆了他的世界，他重新對家族吉他手有新的認識，也讓他對音樂的熱情和家族的堅持有了一次和解。</strong></p>
+											<iframe width="540" height="300" position:'relative' left:'30px' src="https://www.youtube.com/embed/KtbCQDXiBdE"></iframe>
+										</div>
+										{% endif %}
+						            		<div class="ads">
+												<img src="/static/ads1.png" alt="">
+											</div>
+						            	</div>
+						            </div>
+						        </div>
+								<div id="theater" class="tab">
+									<form method="GET" action="/seat">
+									<div class = 'theaterbtn' id='theaterbtn'>
+									<div>
+										<div class="blog-it-infor">
+											<h3><a href="#">Movie</a></h3>
+										</div>
+										<select name = 'mm'>
+											<option>復仇者聯盟：終局之戰</option>
+											<option>黑豹２：瓦干達萬歲</option>
+											<option>捍衛戰士2：獨行俠</option>
+											<option>美國隊長2：酷寒戰士</option>
+											<option>永恆族</option>
+											<option>奇異博士2：失控多重宇宙</option>
+											<option>不可能的任務：全面瓦解</option>
+											<option>金牌特務：間諜密令</option>
+											<option>那些年，我們一起追的女孩</option>
+											<option>可可夜總會</option>
+										</select>
+									</div>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">Theater</a></h3>
+										</div>
+										<select name = 'theater'>
+											<option>台北信義威秀影城</option>
+											<option>台北京站威秀影城</option>
+											<option>板橋大遠百威秀影城</option>
+											<option>中和環球威秀影城</option>
+											<option>林口MITSUI OUTLET PARK威秀影城</option>
+											<option>桃園統領威秀影城</option>
+											<option>新竹大遠百威秀影城</option>
+											<option>新竹巨城威秀影城</option>
+											<option>頭份尚順威秀影城</option>
+											<option>台中大遠百威秀影城</option>
+											<option>台中TIGER CITY威秀影城</option>
+											<option>台中大魯閣新時代威秀影城</option>
+											<option>台南大遠百威秀影城</option>
+											<option>台南FOCUS 威秀影城</option>
+											<option>南南紡威秀影城</option>
+											<option>高雄大遠百威秀影城</option>
+											<option>花蓮新天堂樂園威秀影城</option>
+										</select>
+									</div>
+									<br>
+									<div class = 'datebtn' id = 'datebtn'>
+										<div class="blog-it-infor">
+											<h3><a href="#">Date</a></h3>
+										</div>
+										<select name = 'date' id='date'>
+											<option value = 'date1'>1/13</option>
+											<option value = 'date2'>1/14</option>
+											<option value = 'date3'>1/15</option>
+											<option value = 'date4'>1/16</option>
+											<option value = 'date5'>1/17</option>
+										</select>
+									</div>
+									<br>
+									<div class = 'timebtn' id = 'timebtn'>
+										<div class="blog-it-infor">
+											<h3><a href="#">Time</a></h3>
+										</div>
+										<select name = 'time' id='time'>
+											<option value = 'time1'>9:30</option>
+											<option value = 'time2'>12:30</option>
+											<option value = 'time3'>18:30</option>
+										</select>
+										<br>
+									<div id = 'ticketbtn'>
+										<div class="blog-it-infor">
+											<h3><a href="#">Ticket Type</a></h3>
+										</div>
+										<div class="blog-it-infor">
+											<h3><a href="#">一般票$300</a></h3>
+										</div>
+										<select name = 'ticket1'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">學生票$200</a></h3>
+										</div>
+										<select name = 'ticket2'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">敬老票$150</a></h3>
+										</div>
+										<select name = 'ticket3'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">Food</a></h3>
+										</div>
+										<div class="blog-it-infor">
+											<h3><a href="#">可樂（大）$60</a></h3>
+										</div>
+										<select name = 'food1'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">可樂（中）$50</a></h3>
+										</div>
+										<select name = 'food2'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">可樂（小）$45</a></h3>
+										</div>
+										<select name = 'food3'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">爆米花（大）$120</a></h3>
+										</div>
+										<select name = 'food4'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">爆米花（中）$110</a></h3>
+										</div>
+										<select name = 'food5'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">爆米花（小）$100</a></h3>
+										</div>
+										<select name = 'food6'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">熱狗 $90</a></h3>
+										</div>
+										<select name = 'food7'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<div class="blog-it-infor">
+											<h3><a href="#">吉拿棒 $90</a></h3>
+										</div>
+										<select name = 'food8'>
+											<option>選擇數量</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+										<br>
+										<button type="submit" class="fgpwdbtn" id="next" value="next">Next</button>
+										<br><br><br>
+									</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function theater(){
+		var obj = document.getElementById('datebtn');
+    	if (obj.style.display =='none')
+        	obj.style.display = 'block';
+    	else{
+        	obj.style.display = 'none';
+    	}
+	}
+	function date(){
+		var obj = document.getElementById('timebtn');
+    	if (obj.style.display =='none')
+    	{
+        	obj.style.display = 'block';
+    	}
+    	else{
+        	obj.style.display = 'none';
+    	}
+	}
+	function time(){
+		var obj = document.getElementById('ticketbtn');
+    	if (obj.style.display =='none')
+    	{
+        	obj.style.display = 'block';
+    	}
+    	else{
+        	obj.style.display = 'none';
+    	}
+	}
+</script>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/plugins2.js"></script>
+<script src="/static/js/custom.js"></script>
+</body>
+
+<!-- celebritysingle12:18-->
+</html>
